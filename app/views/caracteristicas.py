@@ -7,7 +7,7 @@ THRESHOLD = 0.6
 TIMEOUT_DOWNLOAD_URLS = 5
 MAXIMUM_NUMBER = 7
 MINIMUM_NUMBER = 3
-FACE_CROP_FUNCTION = crop_face_roi
+FACE_CROP_FUNCTION = crop_face_roi_distant
 
 def handler(signum, frame):
     print("Done!")
