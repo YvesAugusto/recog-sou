@@ -79,7 +79,7 @@ def enroll_feature(data):
         ), 201
 
     try:
-        frames = [read_from_disk(URL) for URL in URL_LIST]
+        frames = [read_from_url(URL) for URL in URL_LIST]
     except Exception as exc:
         return jsonify(
             {"message": 'could not download images', "data": {}}
@@ -144,7 +144,7 @@ def recog(data):
         ), 401
 
     try:
-        face = read_from_disk(URL)
+        face = read_from_url(URL)
         # H, W = face.shape[:2]
         #         # known_face_locations = [(0, 0, W, H)]
         #         # encoding = face_recognition.face_encodings(face, known_face_locations=known_face_locations)

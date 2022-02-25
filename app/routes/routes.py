@@ -6,12 +6,12 @@ def authenticate():
     return helper.auth()
 
 @app.route('/viewUsers', methods=['GET'])
-# @helper.validate_token
+@helper.validate_token
 def get_users():
     return caracteristicas.get_users()
 
 @app.route('/viewUsers/<id>', methods=['GET'])
-# @helper.validate_token
+@helper.validate_token
 def get_user(id):
     return caracteristicas.get_user_by_cpf(id)
 
